@@ -1,0 +1,40 @@
+---
+// Utils
+import { slugify, formatDate } from "../ts/utils";
+
+interface Props {
+  title: string;
+  date: Date;
+  category: string;
+  author: string;
+  image: { src: string; alt: string };
+}
+
+const { title, date, category, author, image } = Astro.props as Props;
+---
+
+<header>
+  <div class="container">
+    <small><a href={`/category/${category}`} class="badge">{category}</a></small
+    >
+    <h1 class="h2">{title}</h1>
+    <p>
+      by <a href={`/author/${slugify(author)}/`}>{author}</a> · {
+        formatDate(date)
+      }
+    </p>
+  </div>
+  <img
+    class="hero-image"
+    src={image.src}
+    alt={image.alt}
+    width="1200"
+    height="600"
+  />
+</header>
+
+<style>
+  .hero-image {
+    border-radius: 1rem;
+  }
+</style>

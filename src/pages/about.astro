@@ -1,0 +1,31 @@
+---
+// Components
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { StyleEnum } from "../enums/styles.enum";
+---
+
+<MainLayout title="Javier Esmerado" description="About page">
+  <span class="container about" aria-label="About me">
+    <img
+      src="/images/headshot.jpg"
+      alt="My headshot"
+      height="330"
+      width="200"
+    />
+    <div class="content">
+      <h1 class="h1">My blog</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in
+        veniam maxime minus dolores, laudantium quos quaerat dolor provident,
+        perspiciatis aspernatur pariatur recusandae. Consectetur quisquam, quam
+        minima perferendis amet molestias!
+      </p>
+      <Link
+        href="mailto:esmerado.vela.javier@gmail.com"
+        style={StyleEnum.PRIMARY}
+        text="Contact Me"
+      />
+</div>
+  </span>
+</MainLayout>

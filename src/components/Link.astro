@@ -1,0 +1,56 @@
+---
+// Icons
+import { Icon } from "astro-icon";
+// Enums
+import { StyleEnum, SideEnum } from "../enums/styles.enum";
+
+interface Props {
+  text: string;
+  href: string;
+  style: StyleEnum;
+  icon?: {
+    name: string;
+    side: SideEnum;
+  };
+  isFilled?: boolean;
+  borderVisible?: boolean;
+  classes?: string;
+}
+
+const {
+  text,
+  href,
+  style,
+  icon,
+  isFilled = true,
+  borderVisible = false,
+  classes,
+  ...rest
+} = Astro.props as Props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "link",
+    classes,
+    style,
+    {
+      filled: isFilled,
+      bordered: borderVisible,
+    },
+  ]}
+  {...rest}
+>
+  {
+    icon && icon.side === SideEnum.LEFT && (
+      <Icon name={icon.name} height="24" width="24" />
+    )
+  }
+  <span>{text}</span>
+  {
+    icon && icon.side === SideEnum.RIGHT && (
+      <Icon name={icon.name} height="24" width="24" />
+    )
+  }
+</a>

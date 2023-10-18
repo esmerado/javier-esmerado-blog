@@ -1,0 +1,29 @@
+---
+// Components
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { SideEnum, StyleEnum } from "../enums/styles.enum";
+---
+
+<MainLayout title="Page Not Found">
+  <div
+    class="container"
+    style={{
+      display: "grid",
+      placeItems: "center",
+      textAlign: "center",
+      gap: "var(--space-sm)",
+    }}
+  >
+    <div>
+      <h1 class="h1">Welp, this is awkward!</h1>
+      <p>We seem to have misplaced something...</p>
+    </div>
+    <Link
+      href="/"
+      style={StyleEnum.SECONDARY}
+      text="Go Home"
+      icon={{ name: "tabler:home", side: SideEnum.RIGHT }}
+    />
+  </div>
+</MainLayout>

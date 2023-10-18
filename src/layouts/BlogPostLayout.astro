@@ -1,0 +1,22 @@
+---
+// Layouts
+import MainLayout from "./MainLayout.astro";
+import BlogPostLayoutHeader from "../components/BlogPostLayoutHeader.astro";
+// Utils
+import { slugify, formatDate } from "../ts/utils";
+import type { Code, Debug } from "astro:components";
+
+const { frontmatter } = Astro.props;
+
+const { title, description } = frontmatter;
+---
+
+<MainLayout {title} {description}>
+  <BlogPostLayoutHeader {...frontmatter} />
+  <div class="post-content">
+    <div class="content">
+      <slot />
+    </div>
+    <div class="sidebar"></div>
+  </div>
+</MainLayout>
