@@ -1,0 +1,24 @@
+---
+// Components
+import PostCard from "./PostCard.astro";
+// Types
+import type { FrontmatterType } from "../types/frontmatter.type";
+
+interface Props {
+  title: string;
+  posts: { frontmatter: FrontmatterType; url: string }[];
+}
+
+const { title, posts } = Astro.props;
+---
+
+<section class="container" aira-label="New Blog Post">
+  <h2 class="h1">{title}</h2>
+  <div class="post-container">
+    {
+      posts.map(({ frontmatter, url }) => (
+        <PostCard frontmatter={frontmatter} url={url} tagType="h3" />
+      ))
+    }
+  </div>
+</section>

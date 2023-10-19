@@ -1,17 +1,19 @@
+import { translations } from "../translations/blog.translations";
+
 interface NavDataI {
-    name: string;
-    path: string;
+  name: string;
+  path: string;
 }
 
 const navData: NavDataI[] = [
-    {
-        name: 'About',
-        path: '/about'
-    },
-    {
-        name: 'Blog',
-        path: '/blog'
-    }
-]
+  {
+    name: translations.NAVIGATION.ABOUT,
+    path: "/about",
+  },
+  {
+    name: translations.NAVIGATION.BLOG,
+    path: "/blog",
+  },
+];
 
-export default navData
+export default navData;

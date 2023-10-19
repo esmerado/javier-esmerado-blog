@@ -2,6 +2,10 @@
 // Utils
 import { formatBlogPosts, slugify } from "../ts/utils";
 
+interface Props {
+  showCount?: boolean;
+}
+
 const allPosts = await Astro.glob("../pages/blog/*.md");
 const formattedPosts = formatBlogPosts(allPosts);
 const allCategories = formattedPosts

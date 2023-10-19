@@ -3,6 +3,11 @@
 import { SideEnum, StyleEnum } from "../enums/styles.enum";
 import Link from "./Link.astro";
 
+interface Props {
+  prevUrl?: string;
+  nextUrl?: string;
+}
+
 const { prevUrl, nextUrl } = Astro.props;
 ---
 

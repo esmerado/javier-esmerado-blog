@@ -1,6 +1,4 @@
-/* WARNING: This CSS is optimized for the tutorial, minimizing the classes you’ll need in the comnponents. In other words, it’s not really great CSS so that the tutorial can hopefully be great—but you’ll need to follow the markup exactly for things to work properly. It would need significant re-write to use in your own custom site. */
 
-/* CSS RESET */
 *,
 *::after,
 *::before {
@@ -31,7 +29,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* CSS variables inspired by https://open-props.style/ */
 :root {
   /* colors */
   --_hue: 235;
@@ -404,7 +401,7 @@ button {
   }
 
   & img {
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-lg);
     height: 400px;
     width: min(300px, 100%);
     box-shadow: var(--shadow-lg);
