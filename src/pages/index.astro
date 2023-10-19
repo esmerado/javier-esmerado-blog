@@ -1,7 +1,44 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+// Components
+import PostCard from "../components/PostCard.astro";
+import Link from "../components/Link.astro";
+// Enums
+import { StyleEnum } from "../enums/styles.enum";
+// Utils
+import { formatBlogPosts } from "../ts/utils";
+
+const allPosts = await Astro.glob("./blog/**/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+  limit: 3,
+});
 ---
 
-<MainLayout title="Javier Esmerado Blog" description="About page">
-  <p>Hello <span>World</span></p>
+<MainLayout title="Javier Esmerado Blog">
+  <span class="container about" aria-label="About me">
+    <img
+      src="/images/headshot.jpg"
+      alt="My headshot"
+      height="330"
+      width="200"
+    />
+    <div class="content">
+      <h1 class="h1">My blog</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in
+        veniam maxime minus dolores.
+      </p>
+      <Link href="/about/" style={StyleEnum.SECONDARY} text="👋 About Me" />
+    </div>
+  </span>
+  <section class="container" aira-label="New Blog Post">
+    <h2 class="h1">New Blog Post</h2>
+    <div class="post-container">
+      {
+        formattedPosts.map(({ frontmatter, url }) => (
+          <PostCard frontmatter={frontmatter} url={url} tagType="h3" />
+        ))
+      }
+    </div>
+  </section>
 </MainLayout>

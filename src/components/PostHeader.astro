@@ -1,16 +1,10 @@
 ---
 // Utils
 import { slugify, formatDate } from "../ts/utils";
+// Types
+import type { FrontmatterType } from "../types/frontmatter.type";
 
-interface Props {
-  title: string;
-  date: Date;
-  category: string;
-  author: string;
-  image: { src: string; alt: string };
-}
-
-const { title, date, category, author, image } = Astro.props as Props;
+const { title, date, category, author, image } = Astro.props as FrontmatterType;
 ---
 
 <header>

@@ -1,0 +1,39 @@
+---
+// Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+// Components
+import PostCard from "../../components/PostCard.astro";
+import Pagination from "../../components/Pagination.astro";
+import CategoryCloud from "../../components/CategoryCloud.astro";
+// Utils
+import { formatBlogPosts } from "../../ts/utils";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob("./*.md");
+  const formattedPosts = formatBlogPosts(allPosts);
+
+  return paginate(formattedPosts, {
+    pageSize: 4,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<MainLayout title="Javier Esmerado Blog">
+  <section class="container" aira-label="New Blog Post">
+    <h1 class="h1">New Blog Post</h1>
+    <div class="post-container">
+      {
+        page.data.map(({ frontmatter, url }) => (
+          <PostCard frontmatter={frontmatter} url={url} tagType="h2" />
+        ))
+      }
+    </div>
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+  </section>
+  <aside class="container" aria-label="Blog categories">
+    <h2 class="h3">Blog Categories</h2>
+    <CategoryCloud showCount={true} />
+  </aside>
+</MainLayout>

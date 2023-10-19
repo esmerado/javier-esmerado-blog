@@ -1,3 +1,7 @@
-module.export = {
-  plugin: [require("postcss-preset-env")({ stage: 0 })],
-};
+module.exports = {
+  plugins: [
+    require('postcss-preset-env')({
+      stage: 0,
+    })
+  ]
+}

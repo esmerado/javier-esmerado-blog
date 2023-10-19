@@ -1,0 +1,40 @@
+---
+// Components
+import { SideEnum, StyleEnum } from "../enums/styles.enum";
+import Link from "./Link.astro";
+
+const { prevUrl, nextUrl } = Astro.props;
+---
+
+<nav aria-label="Blog pages">
+  {
+    prevUrl && (
+      <Link
+        text="Previous"
+        href={prevUrl}
+        style={StyleEnum.PRIMARY}
+        borderVisible={true}
+        isFilled={false}
+        icon={{
+          name: "ic:outline-keyboard-double-arrow-left",
+          side: SideEnum.LEFT,
+        }}
+      />
+    )
+  }
+  {
+    nextUrl && (
+      <Link
+        text="Next"
+        href={nextUrl}
+        style={StyleEnum.PRIMARY}
+        borderVisible={true}
+        isFilled={false}
+        icon={{
+          name: "ic:outline-keyboard-double-arrow-right",
+          side: SideEnum.RIGHT,
+        }}
+      />
+    )
+  }
+</nav>
