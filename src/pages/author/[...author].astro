@@ -5,6 +5,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import PostCard from "../../components/PostCard.astro";
 // Utils
 import { slugify, formatBlogPosts } from "../../ts/utils";
+// Translations
+import { translations } from "../../translations/blog.translations";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../blog/*.md");
@@ -31,7 +33,7 @@ const { posts, authorName } = Astro.props;
 
 <MainLayout title={authorName}>
   <section class="container" aria-label={`${authorName} posts`}>
-    <h1 class="h1">Posts about <span>{authorName}</span></h1>
+    <h1 class="h1">{translations.AUTHORS.TITLE} <span>{authorName}</span></h1>
     <div class="post-container">
       {
         posts.map((post) => (

@@ -1,8 +1,12 @@
 ---
-// Components
+// Layouts
 import MainLayout from "../layouts/MainLayout.astro";
+// Components
 import Link from "../components/Link.astro";
+// Enumerations
 import { SideEnum, StyleEnum } from "../enums/styles.enum";
+// Translations
+import { translations } from "../translations/blog.translations";
 ---
 
 <MainLayout title="Page Not Found">
@@ -16,13 +20,13 @@ import { SideEnum, StyleEnum } from "../enums/styles.enum";
     }}
   >
     <div>
-      <h1 class="h1">Welp, this is awkward!</h1>
-      <p>We seem to have misplaced something...</p>
+      <h1 class="h1">{translations.ERROR_404.TITLE}</h1>
+      <p>{translations.ERROR_404.DESCRIPTION}</p>
     </div>
     <Link
       href="/"
       style={StyleEnum.SECONDARY}
-      text="Go Home"
+      text={translations.ERROR_404.LINK_NAME}
       icon={{ name: "tabler:home", side: SideEnum.RIGHT }}
     />
   </div>

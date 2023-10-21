@@ -5,12 +5,14 @@ import Link from "./Link.astro";
 import { StyleEnum } from "../enums/styles.enum";
 // Data
 import navData from "../data/navData";
+// Translations
+import { translations } from "../translations/blog.translations";
 ---
 
 <nav aria-label="Primary">
   <div class="navbar">
     <a href="/" class="nav-name" aria-label="Go home">
-      <h2 class="h3">Javier Esmerado</h2>
+      <h2 class="h3">{translations.NAVBAR.TITLE}</h2>
     </a>
     <ul>
       {

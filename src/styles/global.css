@@ -194,7 +194,7 @@ body {
 }
 
 .h1 {
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-xl);
   max-width: var(--content-xs);
 }
 
