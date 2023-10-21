@@ -4,9 +4,11 @@ import MainLayout from "./MainLayout.astro";
 // Components
 import BlogPostLayoutHeader from "../components/PostHeader.astro";
 import CategoryCloud from "../components/CategoryCloud.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
 // Utils
 import { formatBlogPosts } from "../ts/utils";
-import RelatedPosts from "../components/RelatedPosts.astro";
+// Translations
+import { translations } from "../translations/blog.translations";
 
 const { frontmatter } = Astro.props;
 const { title, description, category } = frontmatter;
@@ -32,13 +34,13 @@ const relatedPosts = formattedPosts
     </div>
     <div class="sidebar">
       <aside class="container" aria-label="Blog categories">
-        <h2 class="h3">Blog Categories</h2>
+        <h2 class="h3">{translations.BLOG_POST_LAYOUT.TITLE}</h2>
         <CategoryCloud />
       </aside>
       {
         relatedPosts.length > 0 && (
           <aside class="container" aria-label="Related posts">
-            <h2 class="h3">Related Posts</h2>
+            <h2 class="h3">{translations.HORIZONATAL_POSTS.RELATED_POSTS}</h2>
             <RelatedPosts {relatedPosts} />
           </aside>
         )
