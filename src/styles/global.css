@@ -173,6 +173,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  align-items: start;
   grid-template-rows: auto 1fr auto;
   background-color: hsl(var(--bkg));
   color: hsl(var(--txt));
@@ -258,7 +259,7 @@ button {
   display: flex;
   place-items: center;
   gap: var(--space-2xs);
-  width: fit-content;
+  width: max-content;
   padding: calc(var(--space-2xs) * 0.75) var(--space-sm);
   background-color: var(--fill);
   color: var(--type);
