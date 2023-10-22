@@ -1,6 +1,8 @@
 ---
 // Components
 import Link from "./Link.astro";
+// Translations
+import { translations } from "../translations/blog.translations";
 // Utils
 import { slugify, formatDate } from "../ts/utils";
 import { StyleEnum } from "../enums/styles.enum";
@@ -32,6 +34,16 @@ const { title, author, image, date, category, description } = frontmatter;
       </small>
     </div>
     <p>{description}</p>
-    <Link href={url} text="Read Post" style={StyleEnum.SECONDARY} />
+    <Link
+      href={url}
+      text={translations.POST_CARD.LINK}
+      style={StyleEnum.SECONDARY}
+    />
   </div>
 </article>
+
+<style>
+  p {
+    font-size: var(--fs-smx);
+  }
+</style>

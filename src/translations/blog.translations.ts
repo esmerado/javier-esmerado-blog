@@ -38,6 +38,9 @@ export const translations = {
     TITLE: "Nuevos Posts",
     BLOG_CATEGORIES: "Categorías",
   },
+  POST_CARD: {
+    LINK: 'Leer más'
+  },
   ERROR_404: {
     TITLE: "Oops, Algo se Ha Escapado del Blog 🫣",
     DESCRIPTION: "Página no encontrada",
