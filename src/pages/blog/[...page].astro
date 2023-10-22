@@ -18,8 +18,8 @@ export async function getStaticPaths({ paginate }) {
     pageSize: 3,
   });
 }
-
 const { page } = Astro.props;
+console.log(page.data)
 ---
 
 <MainLayout title="Javier Esmerado Blog">
