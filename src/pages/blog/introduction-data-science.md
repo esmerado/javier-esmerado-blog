@@ -93,3 +93,17 @@ Llegado hasta aquí ya sabes que es la Ciencia de Datos, que es un Científico d
 Espero que, junto con la información que he compartido te haya servido para entender un poco más sobre la Ciencia de Datos y este mundo tan nuevo y apasionante.
 
 ¡Hasta la próxima! 👋
+
+<style>
+  img {
+    margin: 1.5rem 0;
+  }
+
+  h3 {
+    margin-top: 1rem;
+  }
+
+  ul,li {
+   margin: 0.5rem 0;
+  }
+</style>
