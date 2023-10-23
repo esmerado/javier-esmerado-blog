@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: ¿Que es la ciencia de datos?
+title: ¿Qué es la ciencia de datos?
 date: 2023-10-22
 author: Javier Esmerado
 image: { src: "/images/data-science-diagram.png", alt: "Data Science Diagram" }
