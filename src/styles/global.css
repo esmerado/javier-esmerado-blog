@@ -409,7 +409,6 @@ button {
   @media (--md) {
     grid-template-columns: 1fr 2fr;
     place-content: center;
-    
   }
 
   & img {
@@ -421,7 +420,12 @@ button {
     object-position: center;
 
     @media (--md) {
+      justify-self: end;
+    }
+
+    @media (max-width: 480px) {
       justify-self: center;
+
     }
   }
 
