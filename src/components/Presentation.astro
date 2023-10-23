@@ -18,7 +18,14 @@ const { title, imageUrl, description, buttonHref, buttonText, buttonStyle } =
 ---
 
 <span class="container about" aria-label="Presentation">
-  <img src={imageUrl} alt={title} height="330" width="200" />
+  <img
+    class="img-container"
+    src={imageUrl}
+    alt={title}
+    height="330"
+    width="200"
+  />
+
   <div class="content">
     <h1 class="h1">{title}</h1>
     <p>
@@ -27,3 +34,13 @@ const { title, imageUrl, description, buttonHref, buttonText, buttonStyle } =
     <Link href={buttonHref} style={buttonStyle} text={buttonText} />
   </div>
 </span>
+
+<style>
+  .container {
+    @media (max-width: 480px) {
+      img {
+        justify-self: center;
+      }
+    }
+  }
+</style>

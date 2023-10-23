@@ -9,13 +9,13 @@ const { title, date, category, author, image } = Astro.props as FrontmatterType;
 
 <header>
   <div class="container">
-    <small
+    <small class="container-category"
       ><a href={`/category/${slugify(category)}`} class="badge">{category}</a
       ></small
     >
     <h1 class="h2">{title}</h1>
     <p>
-      by <a href={`/author/${slugify(author)}/`}>{author}</a> · {
+      <a href={`/author/${slugify(author)}/`}>{author}</a> · {
         formatDate(date)
       }
     </p>
@@ -32,5 +32,13 @@ const { title, date, category, author, image } = Astro.props as FrontmatterType;
 <style>
   .hero-image {
     border-radius: 1rem;
+
+    @media (max-width: 480px) {
+      border-radius: 0;
+    }
+  }
+
+  .container-category {
+    margin-bottom: 1rem;
   }
 </style>
