@@ -11,9 +11,15 @@ category: Ciencia de Datos
 
 ## Introducción
 
-Dentro del mundo de los datos existen tres disciplinas, **Ciencia de Datos** (Data Science), **Analista de Datos** (Data Analyst) y **Analista de Negocios** (Business Analyst). Cada una de ellas, tiene su enfoque, responsabilidades y habilidades necesarias.
+Dentro del mundo de los datos existen tres disciplinas:
 
-Aunque este post esté enfocado en la disciplina de Data Science, creo que es importante saber que existen otras disciplinas orientadas al análisis de los datos.
+- **[Ciencia de Datos](/category/ciencia-de-datos)** (_Data Science_).
+- **Analista de Negocios** (_Business Analyst_).
+- **Analista de Datos** (_Data Analyst_)
+
+Cada una de ellas, tiene su enfoque, responsabilidades y habilidades necesarias.
+
+Aunque este post esté enfocado en la disciplina de _Data Science_, creo que es importante saber que existen otras disciplinas orientadas al análisis de los datos.
 
 ![](/images/data-science-diagram.png)
 
@@ -27,7 +33,7 @@ Esta disciplina desempeña un papel fundamental en la traducción de los datos e
 
 ![](/images/data-analyst.jpg)
 
-Una vez entendido superficial mente a que se dedican las anteriores
+Una vez entendido superficialmente a que se dedican las anteriores
 disciplinas, entramos en la Ciencia de Datos.
 
 ### Ciencia de Datos
@@ -54,29 +60,31 @@ Estas son algunas de las tecnologías y herramientas que utilizan:
 
 1. Lenguajes de programación:
 
-   - Python: Es uno de los lenguajes más populares debido a sus numerosas bibliotecas y marcos de uso, como NumPy, Pandas, Scikit-Learn o Tensor Flow.
-   - R: Es un lenguaje sumamente potente a la hora de realizar distintos cáculos estadísticos y científicos, así como para crear visualizaciones.
+   - [Python](https://es.python.org/): Es uno de los lenguajes más populares debido a sus numerosas bibliotecas y marcos de uso, como NumPy, Pandas, Scikit-Learn o Tensor Flow.
+   - [R](https://www.r-project.org/): Es un lenguaje sumamente potente a la hora de realizar distintos cáculos estadísticos y científicos, así como para crear visualizaciones.
 
 2. Bibliotecas:
-   - NumPy y Pandas, se utilizan para el análisis.
-   - Matplotlib, Seaborn o Plotly, destinadas a la visualización.
-   - Scikit-Learn y TensorFlow, utilizadas para el aprendizaje automático y construcción de modelos.
+   - [NumPy](https://numpy.org/) y [Pandas](https://pandas.pydata.org/), se utilizan para el análisis.
+   - [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/) o Plotly, destinadas a la visualización.
+   - Scikit-Learn y [TensorFlow](https://www.tensorflow.org/), utilizadas para el aprendizaje automático y construcción de modelos.
 3. Bases de datos:
    - SQL, base de datos relacional.
-   - NoSQL, como MongoDB o Cassandra, son bases de datos no estructurados o semi estructurados.
+   - NoSQL, como [MongoDB](https://www.mongodb.com/) o Cassandra, son bases de datos no estructurados o semi estructurados.
    - Apache Hadoop y Spark, utilizadas para el procesamiento y análisis de datos a gran escala.
 4. Herramientas de Big Data:
    - Hadoop y su ecosistema (Hive, Pig, HBase).
-   - Apache Spark para el procesamiento de datos a tiempo real y por lotes.
+   - [Apache Spark](https://spark.apache.org/) para el procesamiento de datos a tiempo real y por lotes.
 5. Cloud Computing:
-   - Amazon Web Services (AWS), Google Cloud Platform (GCP) y Microsoft Azure para alojar y procesar datos.
+   - [Amazon Web Services](https://aws.amazon.com/) (AWS), Google Cloud Platform (GCP) y Microsoft Azure para alojar y procesar datos.
 6. Herramientas de visualización de datos:
-   - Tableau.
-   - Power BI.
-   - Kaggle
-   - Looker
+   - [Tableau](https://www.tableau.com/)
+   - [Power BI](https://powerbi.microsoft.com/)
+   - [Kaggle](https://www.kaggle.com/)
+   - [Looker](https://lookerstudio.google.com/)
 
 ![](/images/looker.jpeg)
+
+---
 
 ### Conclusiones
 
