@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: Las 5 etapas del ciclo de vida de los datos
-date: 2023-10-27
+date: 2023-10-29
 author: Javier Esmerado
 image:
   { src: "/images/grafico-circular.png", alt: "Ciclo de vida de los datos" }
